@@ -1,0 +1,18 @@
+$TTL	1D ;
+$ORIGIN mydomain.student100.
+@	IN	SOA	ns1.mydomain.student100. root.mydomain.student100. (
+				2015032801	; Serial
+				3H		; Refresh
+				15		; Retry
+				1w		; Expire
+				3h )		; Negative Cache TTL
+;
+@	IN	NS	ns1.mydomain.student100.
+@	IN	A	192.168.1.254
+; server host definitions
+ns1	IN	A	192.168.1.254		;name server definition
+www	IN	CNAME	mydomain.student100.	;web server def.
+; non server domain hosts
+john	IN	A	192.168.1.100
+peter	IN	A	192.168.1.101
+

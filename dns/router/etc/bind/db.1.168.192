@@ -1,0 +1,18 @@
+$TTL	86400 ; 24 hours
+$ORIGIN	1.168.192.IN-ADDR.ARPA.
+@	1D	IN	SOA	ns1.mydomain.student100. root.mydomain.student100. (
+				2015032801	; Serial
+				3H		; refresh
+				15		; retry
+				1w		; expire
+				3h		; minimum
+				)
+; name servers for the zone - both out of zone - no A RRs required
+	IN	NS	ns1.mydomain.student100.
+; server host definitions
+254	IN	PTR	ns1.mydomain.student100.
+254	IN	PTR	www.mydomain.student100.
+; non server domain hosts
+100	IN	PTR	john.mydomain.student100.
+101	IN	PTR	peter.mydomain.student100.
+
